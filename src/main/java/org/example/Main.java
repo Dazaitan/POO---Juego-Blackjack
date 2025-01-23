@@ -31,6 +31,17 @@ public class Main {
                 default:
                     System.out.println("Esa no es una opcion válida");
             }
+            if (opcion == 3) {
+                System.out.println("¿Quieres jugar otra partida? (s/n): ");
+                String respuesta = sc.next();
+                if (respuesta.equalsIgnoreCase("s")) {
+                    jugador.descartarMano(mazo);
+                    System.out.println("Iniciando nueva partida...");
+                    opcion = 0;
+                } else {
+                    break;
+                }
+            }
         } while (opcion != 3);
 
 

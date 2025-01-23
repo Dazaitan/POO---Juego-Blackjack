@@ -38,4 +38,10 @@ public class Jugador {
     public ArrayList<Carta> getMano() {
         return mano;
     }
+    public void descartarMano(Mazo mazo){
+        for (Carta carta : mano){
+            mazo.agregarDescarte(carta);
+        }
+        mano.clear();
+    }
 }
