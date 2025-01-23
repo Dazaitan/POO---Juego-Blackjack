@@ -23,9 +23,7 @@ public class Mazo {
 
     public Carta repartirCarta() {
         if (cartas.isEmpty() && !pilaDescarte.isEmpty()){
-            cartas.addAll(pilaDescarte);
-            pilaDescarte.clear();
-            Collections.shuffle(cartas);
+            reiniciarMazo();
         }
         return cartas.remove(cartas.size() - 1);
     }
